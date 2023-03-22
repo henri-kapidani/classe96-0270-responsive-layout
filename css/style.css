@@ -1,0 +1,165 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-col: #0084fd;
+	--primary-col-light: #b5ddff;
+	--secondary-col: #9792e4;
+	--secondary-col-light: #d5d4f4;
+	--text-col: #111;
+	--white-col: #fff;
+	--dark-gray: #333;
+}
+
+body {
+	font-family: 'PT Sans', sans-serif;
+	color: var(--text-col);
+	background: var(--white-col);
+	line-height: 2;
+}
+
+.container {
+	max-width: 1150px;
+	margin-inline: auto;
+	padding-inline: 1rem;
+}
+
+.container-small {
+	max-width: 800px;
+	margin-inline: auto;
+	padding-inline: 1rem;
+}
+
+.bg-secondary {
+	background-color: var(--secondary-col);
+}
+
+/* header grid */
+
+.features {
+	padding: 2rem 0 5rem;
+}
+.features .container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.features .card {
+	padding: 2rem;
+	width: calc((100% - 2 * 1rem) / 3);
+	background-color: var(--secondary-col);
+	border-radius: 2rem;
+}
+
+.features .card-hero {
+	display: flex;
+	width: calc(2 * (100% - 2 * 1rem) / 3 + 1rem);
+	padding: 0;
+}
+
+.features .text {
+	width: 50%;
+	padding: 2rem 0 2rem 2rem;
+}
+
+.features img {
+	width: 50%;
+	max-height: 250px;
+	padding-top: 50px;
+	align-self: flex-end;
+	object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+	.features .card {
+		width: calc((100% - 1rem) / 2);
+	}
+
+	.features .card-hero {
+		width: 100%;
+	}
+}
+
+
+@media (max-width: 750px) {
+	.features .card-hero {
+		flex-direction: column;
+	}
+
+	.features .text {
+		width: 100%;
+		padding-bottom: 0;
+		padding-right: 2rem;
+	}
+
+	.features img {
+		width: 100%;
+		object-position: left;
+	}
+}
+
+@media (max-width: 568px) {
+	.features .container {
+		flex-direction: column;
+	}
+
+	.features .card,
+	.features .card-hero {
+		width: 100%;
+	}
+
+	.features img {
+		object-position: center;
+	}
+}
+
+/* section planning */
+
+.planning {
+	padding: 2rem 0 2rem;
+}
+
+.planning .container-small {
+	display: flex;
+	align-items: flex-end;
+	gap: 3rem;
+}
+
+.planning .strategic {
+	width: calc(50% - 1.5rem);
+}
+
+.planning .development {
+	width: calc(50% - 1.5rem);
+	padding: 1.5rem;
+	background-color: var(--white-col);
+	border-radius: 2rem;
+	text-align: center;
+}
+
+.planning .strategic img {
+	width: 100%;
+	padding-bottom: 5rem;
+}
+
+.planning .development img {
+	width: 70%;
+}
+
+@media (max-width: 750px) {
+	.planning .container-small {
+		flex-direction: column;
+	}
+
+	.planning .strategic {
+		width: 100%;
+	}
+
+	.planning .development {
+		width: 100%;
+	}
+}
